@@ -1,0 +1,23 @@
+var _exercism$xelm$Raindrops$raindrops = function (x) {
+	var drops = _elm_lang$core$Native_List.fromArray(
+		[
+			{ctor: '_Tuple2', _0: 3, _1: 'Pling'},
+			{ctor: '_Tuple2', _0: 5, _1: 'Plang'},
+			{ctor: '_Tuple2', _0: 7, _1: 'Plong'}
+		]);
+	return function (xs) {
+		return _elm_lang$core$List$isEmpty(xs) ? _elm_lang$core$Basics$toString(x) : _elm_lang$core$String$concat(xs);
+	}(
+		A3(
+			_elm_lang$core$List$foldr,
+			F2(
+				function (_p0, acc) {
+					var _p1 = _p0;
+					return _elm_lang$core$Native_Utils.eq(
+						A2(_elm_lang$core$Basics_ops['%'], x, _p1._0),
+						0) ? A2(_elm_lang$core$List_ops['::'], _p1._1, acc) : acc;
+				}),
+			_elm_lang$core$Native_List.fromArray(
+				[]),
+			drops));
+};

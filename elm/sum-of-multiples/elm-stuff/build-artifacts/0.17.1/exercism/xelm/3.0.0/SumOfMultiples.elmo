@@ -1,0 +1,19 @@
+var _exercism$xelm$SumOfMultiples$calcFactor = F2(
+	function (factors, n) {
+		return A2(
+			_elm_lang$core$List$any,
+			function (x) {
+				return _elm_lang$core$Native_Utils.eq(
+					A2(_elm_lang$core$Basics_ops['%'], n, x),
+					0);
+			},
+			factors);
+	});
+var _exercism$xelm$SumOfMultiples$sumOfMultiples = F2(
+	function (factors, limit) {
+		return _elm_lang$core$List$sum(
+			A2(
+				_elm_lang$core$List$filter,
+				_exercism$xelm$SumOfMultiples$calcFactor(factors),
+				_elm_lang$core$Native_List.range(1, limit - 1)));
+	});

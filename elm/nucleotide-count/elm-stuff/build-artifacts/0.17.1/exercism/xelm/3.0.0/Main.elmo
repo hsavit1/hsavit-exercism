@@ -1,0 +1,52 @@
+var _exercism$xelm$Main$tests = A2(
+	_elm_community$elm_test$Test$describe,
+	'NucleotideCount',
+	_elm_lang$core$Native_List.fromArray(
+		[
+			A2(
+			_elm_community$elm_test$Test$test,
+			'the solution is for the correct version of the test',
+			function (_p0) {
+				var _p1 = _p0;
+				return A2(_elm_community$elm_test$Expect$equal, 2, _exercism$xelm$NucleotideCount$version);
+			}),
+			A2(
+			_elm_community$elm_test$Test$test,
+			'empty dna strand has no nucleotides',
+			function (_p2) {
+				var _p3 = _p2;
+				return A2(
+					_elm_community$elm_test$Expect$equal,
+					{a: 0, t: 0, c: 0, g: 0},
+					_exercism$xelm$NucleotideCount$nucleotideCounts(''));
+			}),
+			A2(
+			_elm_community$elm_test$Test$test,
+			'repetitive-sequence-has-only-guanosine',
+			function (_p4) {
+				var _p5 = _p4;
+				return A2(
+					_elm_community$elm_test$Expect$equal,
+					{a: 0, t: 0, c: 0, g: 8},
+					_exercism$xelm$NucleotideCount$nucleotideCounts('GGGGGGGG'));
+			}),
+			A2(
+			_elm_community$elm_test$Test$test,
+			'counts all nucleotides',
+			function (_p6) {
+				var _p7 = _p6;
+				return A2(
+					_elm_community$elm_test$Expect$equal,
+					{a: 20, t: 21, c: 12, g: 17},
+					_exercism$xelm$NucleotideCount$nucleotideCounts('AGCTTTTCATTCTGACTGCAACGGGCAATATGTCTCTGTGTGGATTAAAAAAAGAGTGTCTGATAGCAGC'));
+			})
+		]));
+var _exercism$xelm$Main$emit = _elm_lang$core$Native_Platform.outgoingPort(
+	'emit',
+	function (v) {
+		return [v._0, v._1];
+	});
+var _exercism$xelm$Main$main = {
+	main: A2(_rtfeldman$node_test_runner$Test_Runner_Node$run, _exercism$xelm$Main$emit, _exercism$xelm$Main$tests),
+	flags: _elm_lang$core$Json_Decode$value
+};

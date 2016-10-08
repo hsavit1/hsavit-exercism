@@ -1,0 +1,32 @@
+var _exercism$xelm$WordCount$inc = function (_p0) {
+	return _elm_lang$core$Maybe$Just(
+		A2(
+			F2(
+				function (x, y) {
+					return x + y;
+				}),
+			1,
+			A2(_elm_lang$core$Maybe$withDefault, 0, _p0)));
+};
+var _exercism$xelm$WordCount$punctuation = _elm_lang$core$Regex$regex('[!@#$%^&*():;\"\',.]+');
+var _exercism$xelm$WordCount$words = function (string) {
+	return _elm_lang$core$String$words(
+		A4(
+			_elm_lang$core$Regex$replace,
+			_elm_lang$core$Regex$All,
+			_exercism$xelm$WordCount$punctuation,
+			function (_p1) {
+				return '';
+			},
+			_elm_lang$core$String$toLower(string)));
+};
+var _exercism$xelm$WordCount$wordCount = function (string) {
+	return A3(
+		_elm_lang$core$List$foldl,
+		F2(
+			function (word, acc) {
+				return A3(_elm_lang$core$Dict$update, word, _exercism$xelm$WordCount$inc, acc);
+			}),
+		_elm_lang$core$Dict$empty,
+		_exercism$xelm$WordCount$words(string));
+};

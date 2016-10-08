@@ -1,0 +1,38 @@
+var _exercism$xelm$Anagram$isAnagram = F2(
+	function (string1, string2) {
+		var _p0 = _elm_lang$core$Native_Utils.eq(
+			_elm_lang$core$String$length(string1),
+			_elm_lang$core$String$length(string2));
+		if (_p0 === false) {
+			return '';
+		} else {
+			var stringList2 = _elm_lang$core$String$toList(
+				_elm_lang$core$String$toLower(string2));
+			var stringList1 = _elm_lang$core$String$toList(
+				_elm_lang$core$String$toLower(string1));
+			return _elm_lang$core$Native_Utils.eq(
+				_elm_lang$core$List$sort(stringList1),
+				_elm_lang$core$List$sort(stringList2)) ? string1 : '';
+		}
+	});
+var _exercism$xelm$Anagram$detect = F2(
+	function (string, list) {
+		return A2(
+			_elm_lang$core$List$filter,
+			function (w) {
+				return !_elm_lang$core$Native_Utils.eq(
+					_elm_lang$core$String$toLower(w),
+					_elm_lang$core$String$toLower(string));
+			},
+			A2(
+				_elm_lang$core$List$filter,
+				function (s) {
+					return !_elm_lang$core$Native_Utils.eq(s, '');
+				},
+				A2(
+					_elm_lang$core$List$map,
+					function (s) {
+						return A2(_exercism$xelm$Anagram$isAnagram, s, string);
+					},
+					list)));
+	});

@@ -1,0 +1,288 @@
+var _exercism$xelm$Main$tests = A2(
+	_elm_community$elm_test$Test$describe,
+	'Sublist',
+	_elm_lang$core$Native_List.fromArray(
+		[
+			A2(
+			_elm_community$elm_test$Test$test,
+			'the solution is for the correct version of the test',
+			function (_p0) {
+				var _p1 = _p0;
+				return A2(_elm_community$elm_test$Expect$equal, 2, _exercism$xelm$Sublist$version);
+			}),
+			A2(
+			_elm_community$elm_test$Test$test,
+			'empty equals empty',
+			function (_p2) {
+				var _p3 = _p2;
+				return A2(
+					_elm_community$elm_test$Expect$equal,
+					_exercism$xelm$Sublist$Equal,
+					A2(
+						_exercism$xelm$Sublist$sublist,
+						_elm_lang$core$Native_List.fromArray(
+							[]),
+						_elm_lang$core$Native_List.fromArray(
+							[])));
+			}),
+			A2(
+			_elm_community$elm_test$Test$test,
+			'empty is a sublist of anything',
+			function (_p4) {
+				var _p5 = _p4;
+				return A2(
+					_elm_community$elm_test$Expect$equal,
+					_exercism$xelm$Sublist$Sublist,
+					A2(
+						_exercism$xelm$Sublist$sublist,
+						_elm_lang$core$Native_List.fromArray(
+							[]),
+						_elm_lang$core$Native_List.fromArray(
+							[1, 2])));
+			}),
+			A2(
+			_elm_community$elm_test$Test$test,
+			'anything is a superlist of empty',
+			function (_p6) {
+				var _p7 = _p6;
+				return A2(
+					_elm_community$elm_test$Expect$equal,
+					_exercism$xelm$Sublist$Superlist,
+					A2(
+						_exercism$xelm$Sublist$sublist,
+						_elm_lang$core$Native_List.fromArray(
+							[1, 2]),
+						_elm_lang$core$Native_List.fromArray(
+							[])));
+			}),
+			A2(
+			_elm_community$elm_test$Test$test,
+			'1 is not 2',
+			function (_p8) {
+				var _p9 = _p8;
+				return A2(
+					_elm_community$elm_test$Expect$equal,
+					_exercism$xelm$Sublist$Unequal,
+					A2(
+						_exercism$xelm$Sublist$sublist,
+						_elm_lang$core$Native_List.fromArray(
+							[1]),
+						_elm_lang$core$Native_List.fromArray(
+							[2])));
+			}),
+			A2(
+			_elm_community$elm_test$Test$test,
+			'compare larger equal lists',
+			function (_p10) {
+				var _p11 = _p10;
+				return A2(
+					_elm_community$elm_test$Expect$equal,
+					_exercism$xelm$Sublist$Equal,
+					A2(
+						_exercism$xelm$Sublist$sublist,
+						_elm_lang$core$Native_List.fromArray(
+							[1, 1, 1]),
+						_elm_lang$core$Native_List.fromArray(
+							[1, 1, 1])));
+			}),
+			A2(
+			_elm_community$elm_test$Test$test,
+			'sublist at start',
+			function (_p12) {
+				var _p13 = _p12;
+				return A2(
+					_elm_community$elm_test$Expect$equal,
+					_exercism$xelm$Sublist$Sublist,
+					A2(
+						_exercism$xelm$Sublist$sublist,
+						_elm_lang$core$Native_List.fromArray(
+							[1, 2, 3]),
+						_elm_lang$core$Native_List.fromArray(
+							[1, 2, 3, 4, 5])));
+			}),
+			A2(
+			_elm_community$elm_test$Test$test,
+			'sublist in the middle',
+			function (_p14) {
+				var _p15 = _p14;
+				return A2(
+					_elm_community$elm_test$Expect$equal,
+					_exercism$xelm$Sublist$Sublist,
+					A2(
+						_exercism$xelm$Sublist$sublist,
+						_elm_lang$core$Native_List.fromArray(
+							[4, 3, 2]),
+						_elm_lang$core$Native_List.fromArray(
+							[5, 4, 3, 2, 1])));
+			}),
+			A2(
+			_elm_community$elm_test$Test$test,
+			'sublist at end',
+			function (_p16) {
+				var _p17 = _p16;
+				return A2(
+					_elm_community$elm_test$Expect$equal,
+					_exercism$xelm$Sublist$Sublist,
+					A2(
+						_exercism$xelm$Sublist$sublist,
+						_elm_lang$core$Native_List.fromArray(
+							[3, 4, 5]),
+						_elm_lang$core$Native_List.fromArray(
+							[1, 2, 3, 4, 5])));
+			}),
+			A2(
+			_elm_community$elm_test$Test$test,
+			'partially matching sublist at start',
+			function (_p18) {
+				var _p19 = _p18;
+				return A2(
+					_elm_community$elm_test$Expect$equal,
+					_exercism$xelm$Sublist$Sublist,
+					A2(
+						_exercism$xelm$Sublist$sublist,
+						_elm_lang$core$Native_List.fromArray(
+							[1, 1, 2]),
+						_elm_lang$core$Native_List.fromArray(
+							[1, 1, 1, 2])));
+			}),
+			A2(
+			_elm_community$elm_test$Test$test,
+			'sublist early in huge list',
+			function (_p20) {
+				var _p21 = _p20;
+				return A2(
+					_elm_community$elm_test$Expect$equal,
+					_exercism$xelm$Sublist$Sublist,
+					A2(
+						_exercism$xelm$Sublist$sublist,
+						_elm_lang$core$Native_List.fromArray(
+							[3, 4, 5]),
+						_elm_lang$core$Native_List.range(1, 100000)));
+			}),
+			A2(
+			_elm_community$elm_test$Test$test,
+			'huge sublist not in list',
+			function (_p22) {
+				var _p23 = _p22;
+				return A2(
+					_elm_community$elm_test$Expect$equal,
+					_exercism$xelm$Sublist$Unequal,
+					A2(
+						_exercism$xelm$Sublist$sublist,
+						_elm_lang$core$Native_List.range(10, 5001),
+						_elm_lang$core$Native_List.range(1, 5000)));
+			}),
+			A2(
+			_elm_community$elm_test$Test$test,
+			'superlist at start',
+			function (_p24) {
+				var _p25 = _p24;
+				return A2(
+					_elm_community$elm_test$Expect$equal,
+					_exercism$xelm$Sublist$Superlist,
+					A2(
+						_exercism$xelm$Sublist$sublist,
+						_elm_lang$core$Native_List.fromArray(
+							[1, 2, 3, 4, 5]),
+						_elm_lang$core$Native_List.fromArray(
+							[1, 2, 3])));
+			}),
+			A2(
+			_elm_community$elm_test$Test$test,
+			'superlist in middle',
+			function (_p26) {
+				var _p27 = _p26;
+				return A2(
+					_elm_community$elm_test$Expect$equal,
+					_exercism$xelm$Sublist$Superlist,
+					A2(
+						_exercism$xelm$Sublist$sublist,
+						_elm_lang$core$Native_List.fromArray(
+							[5, 4, 3, 2, 1]),
+						_elm_lang$core$Native_List.fromArray(
+							[4, 3, 2])));
+			}),
+			A2(
+			_elm_community$elm_test$Test$test,
+			'superlist at end',
+			function (_p28) {
+				var _p29 = _p28;
+				return A2(
+					_elm_community$elm_test$Expect$equal,
+					_exercism$xelm$Sublist$Superlist,
+					A2(
+						_exercism$xelm$Sublist$sublist,
+						_elm_lang$core$Native_List.fromArray(
+							[1, 2, 3, 4, 5]),
+						_elm_lang$core$Native_List.fromArray(
+							[3, 4, 5])));
+			}),
+			A2(
+			_elm_community$elm_test$Test$test,
+			'partially matching superlist at start',
+			function (_p30) {
+				var _p31 = _p30;
+				return A2(
+					_elm_community$elm_test$Expect$equal,
+					_exercism$xelm$Sublist$Superlist,
+					A2(
+						_exercism$xelm$Sublist$sublist,
+						_elm_lang$core$Native_List.fromArray(
+							[1, 1, 1, 2]),
+						_elm_lang$core$Native_List.fromArray(
+							[1, 1, 2])));
+			}),
+			A2(
+			_elm_community$elm_test$Test$test,
+			'superlist early in huge list',
+			function (_p32) {
+				var _p33 = _p32;
+				return A2(
+					_elm_community$elm_test$Expect$equal,
+					_exercism$xelm$Sublist$Superlist,
+					A2(
+						_exercism$xelm$Sublist$sublist,
+						_elm_lang$core$Native_List.range(1, 100000),
+						_elm_lang$core$Native_List.fromArray(
+							[3, 4, 5])));
+			}),
+			A2(
+			_elm_community$elm_test$Test$test,
+			'recurring values sublist',
+			function (_p34) {
+				var _p35 = _p34;
+				return A2(
+					_elm_community$elm_test$Expect$equal,
+					_exercism$xelm$Sublist$Sublist,
+					A2(
+						_exercism$xelm$Sublist$sublist,
+						_elm_lang$core$Native_List.fromArray(
+							[1, 2, 1, 2, 3]),
+						_elm_lang$core$Native_List.fromArray(
+							[1, 2, 3, 1, 2, 1, 2, 3, 2, 1])));
+			}),
+			A2(
+			_elm_community$elm_test$Test$test,
+			'recurring values unequal',
+			function (_p36) {
+				var _p37 = _p36;
+				return A2(
+					_elm_community$elm_test$Expect$equal,
+					_exercism$xelm$Sublist$Unequal,
+					A2(
+						_exercism$xelm$Sublist$sublist,
+						_elm_lang$core$Native_List.fromArray(
+							[1, 2, 1, 2, 3]),
+						_elm_lang$core$Native_List.fromArray(
+							[1, 2, 3, 1, 2, 3, 2, 3, 2, 1])));
+			})
+		]));
+var _exercism$xelm$Main$emit = _elm_lang$core$Native_Platform.outgoingPort(
+	'emit',
+	function (v) {
+		return [v._0, v._1];
+	});
+var _exercism$xelm$Main$main = {
+	main: A2(_rtfeldman$node_test_runner$Test_Runner_Node$run, _exercism$xelm$Main$emit, _exercism$xelm$Main$tests),
+	flags: _elm_lang$core$Json_Decode$value
+};

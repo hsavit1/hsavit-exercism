@@ -1,0 +1,58 @@
+
+==================== FINAL INTERFACE ====================
+2016-10-08 17:00:46.600527 UTC
+
+interface hamming-0.0.0-HpID8gVWjp5JznYos4062n:Hamming 8001
+  interface hash: bd8756ed5094e4f0541defbfe674667d
+  ABI hash: 80598f54521d2a1de0ff219e5ae7ed2f
+  export-list hash: f971678ba52bc35a5cb5e61ac8ca0ec0
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: a4046e0fdab24403354cf30558c1ea1c
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  Hamming.distance
+module dependencies:
+package dependencies: base-4.9.0.0* ghc-prim-0.5.0.0
+                      integer-gmp-1.0.0.1
+orphans: base-4.9.0.0:GHC.Base base-4.9.0.0:GHC.Float
+family instance modules: base-4.9.0.0:Control.Applicative
+                         base-4.9.0.0:Data.Either base-4.9.0.0:Data.Functor.Const
+                         base-4.9.0.0:Data.Monoid base-4.9.0.0:Data.Type.Equality
+                         base-4.9.0.0:GHC.Generics base-4.9.0.0:GHC.IO.Exception
+                         base-4.9.0.0:GHC.TypeLits
+import  -/  base-4.9.0.0:Control.Applicative 7728b33d6969dce59e89474349eb1397
+import  -/  base-4.9.0.0:Data.Functor 6fc476505db88d678632a4a838125f13
+import  -/  base-4.9.0.0:GHC.Base 8ed3be81c0707b322f975a84ae1bb816
+import  -/  base-4.9.0.0:GHC.Enum fdf7ac3e1b0be0a4a37257601bddad14
+import  -/  base-4.9.0.0:GHC.Num 48f506a8f4ecf06285d0a0706594dcc0
+import  -/  base-4.9.0.0:Prelude b9bddb97799837fe67a8d00939a5b6c3
+import  -/  ghc-prim-0.5.0.0:GHC.Classes 0bdf3d057a415ec1b84a7b1994efbe47
+48728d767fb7c752e0b0738bcd905c87
+  $trModule :: GHC.Types.Module
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Module
+                   Hamming.$trModule2
+                   Hamming.$trModule1) -}
+8974956b6e5ec242eb6c97bceaa1540c
+  $trModule1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "Hamming"#) -}
+0e5021e43be43cdcb25a27453853fc93
+  $trModule2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS
+                   "hamming-0.0.0-HpID8gVWjp5JznYos4062n"#) -}
+58ba17c61984207030f436165b8298ec
+  distance ::
+    GHC.Base.String -> GHC.Base.String -> GHC.Base.Maybe GHC.Types.Int
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><S,1*U> -}
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: safe
+require own pkg trusted: False
+

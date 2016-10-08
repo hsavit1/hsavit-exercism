@@ -1,0 +1,40 @@
+var _exercism$xelm$RunLengthEncoding$dropWhile = F2(
+	function (predicate, list) {
+		dropWhile:
+		while (true) {
+			var _p0 = list;
+			if (_p0.ctor === '[]') {
+				return _elm_lang$core$Native_List.fromArray(
+					[]);
+			} else {
+				if (predicate(_p0._0)) {
+					var _v1 = predicate,
+						_v2 = _p0._1;
+					predicate = _v1;
+					list = _v2;
+					continue dropWhile;
+				} else {
+					return list;
+				}
+			}
+		}
+	});
+var _exercism$xelm$RunLengthEncoding$takeWhile = F2(
+	function (predicate, xs) {
+		var _p1 = xs;
+		if (_p1.ctor === '[]') {
+			return _elm_lang$core$Native_List.fromArray(
+				[]);
+		} else {
+			var _p2 = _p1._0;
+			return predicate(_p2) ? A2(
+				_elm_lang$core$List_ops['::'],
+				_p2,
+				A2(_exercism$xelm$RunLengthEncoding$takeWhile, predicate, _p1._1)) : _elm_lang$core$Native_List.fromArray(
+				[]);
+		}
+	});
+var _exercism$xelm$RunLengthEncoding$Char = {ctor: 'Char'};
+var _exercism$xelm$RunLengthEncoding$Int = function (a) {
+	return {ctor: 'Int', _0: a};
+};

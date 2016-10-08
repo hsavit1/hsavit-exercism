@@ -1,0 +1,41 @@
+var _exercism$xelm$Hamming$filterChar = function (_p0) {
+	var _p1 = _p0;
+	return _elm_lang$core$Native_Utils.eq(_p1._0, _p1._1) ? false : true;
+};
+var _exercism$xelm$Hamming$distance = F2(
+	function (strand1, strand2) {
+		var strand2Length = _elm_lang$core$String$length(strand2);
+		var strand2List = _elm_lang$core$String$toList(strand2);
+		var strand1List = _elm_lang$core$String$toList(strand1);
+		var length = _elm_lang$core$List$length(
+			A2(
+				_elm_lang$core$List$filter,
+				_exercism$xelm$Hamming$filterChar,
+				A3(
+					_elm_lang$core$List$map2,
+					F2(
+						function (v0, v1) {
+							return {ctor: '_Tuple2', _0: v0, _1: v1};
+						}),
+					strand1List,
+					strand2List)));
+		var strand1Length = _elm_lang$core$String$length(strand1);
+		if (_elm_lang$core$Native_Utils.eq(strand1Length, 0) && _elm_lang$core$Native_Utils.eq(strand2Length, 0)) {
+			return _elm_lang$core$Maybe$Just(0);
+		} else {
+			if (_elm_lang$core$Native_Utils.eq(strand1, strand2)) {
+				return _elm_lang$core$Maybe$Just(0);
+			} else {
+				if (_elm_lang$core$Native_Utils.eq(strand1Length, strand2Length)) {
+					var _p2 = length;
+					if (_p2 === 0) {
+						return _elm_lang$core$Maybe$Nothing;
+					} else {
+						return _elm_lang$core$Maybe$Just(length);
+					}
+				} else {
+					return _elm_lang$core$Maybe$Nothing;
+				}
+			}
+		}
+	});

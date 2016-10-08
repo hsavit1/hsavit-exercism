@@ -1,0 +1,25 @@
+var _exercism$xelm$DifferenceOfSquares$range = function (num) {
+	return _elm_lang$core$Native_List.range(1, num);
+};
+var _exercism$xelm$DifferenceOfSquares$square = function (x) {
+	return Math.pow(x, 2);
+};
+var _exercism$xelm$DifferenceOfSquares$squareOfSum = function (num) {
+	return function (_p0) {
+		return _exercism$xelm$DifferenceOfSquares$square(
+			_elm_lang$core$List$sum(
+				_exercism$xelm$DifferenceOfSquares$range(_p0)));
+	}(num);
+};
+var _exercism$xelm$DifferenceOfSquares$sumOfSquares = function (num) {
+	return function (_p1) {
+		return _elm_lang$core$List$sum(
+			A2(
+				_elm_lang$core$List$map,
+				_exercism$xelm$DifferenceOfSquares$square,
+				_exercism$xelm$DifferenceOfSquares$range(_p1)));
+	}(num);
+};
+var _exercism$xelm$DifferenceOfSquares$difference = function (num) {
+	return _exercism$xelm$DifferenceOfSquares$squareOfSum(num) - _exercism$xelm$DifferenceOfSquares$sumOfSquares(num);
+};

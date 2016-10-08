@@ -1,0 +1,21 @@
+var _exercism$xelm$Pangram$alphabet = _elm_lang$core$Native_List.fromArray(
+	['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']);
+var _exercism$xelm$Pangram$isPangram = function (string) {
+	var boolList = A2(
+		_elm_lang$core$List$map,
+		function (s) {
+			return A2(
+				_elm_lang$core$String$contains,
+				s,
+				_elm_lang$core$String$toLower(string));
+		},
+		_exercism$xelm$Pangram$alphabet);
+	return A3(
+		_elm_lang$core$List$foldl,
+		F2(
+			function (x, y) {
+				return x && y;
+			}),
+		true,
+		boolList);
+};

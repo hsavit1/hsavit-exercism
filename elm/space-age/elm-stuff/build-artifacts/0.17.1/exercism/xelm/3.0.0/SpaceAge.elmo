@@ -1,0 +1,33 @@
+var _exercism$xelm$SpaceAge$ageOnEarth = function (input) {
+	return input / 3.15576e7;
+};
+var _exercism$xelm$SpaceAge$ageOn = F2(
+	function (planet, seconds) {
+		var _p0 = planet;
+		switch (_p0.ctor) {
+			case 'Mercury':
+				return _exercism$xelm$SpaceAge$ageOnEarth(seconds) / 0.2408467;
+			case 'Venus':
+				return _exercism$xelm$SpaceAge$ageOnEarth(seconds) / 0.61519726;
+			case 'Earth':
+				return _exercism$xelm$SpaceAge$ageOnEarth(seconds);
+			case 'Mars':
+				return _exercism$xelm$SpaceAge$ageOnEarth(seconds) / 1.8808158;
+			case 'Jupiter':
+				return _exercism$xelm$SpaceAge$ageOnEarth(seconds) / 11.862615;
+			case 'Saturn':
+				return _exercism$xelm$SpaceAge$ageOnEarth(seconds) / 29.447498;
+			case 'Neptune':
+				return _exercism$xelm$SpaceAge$ageOnEarth(seconds) / 84.016846;
+			default:
+				return _exercism$xelm$SpaceAge$ageOnEarth(seconds) / 164.79132;
+		}
+	});
+var _exercism$xelm$SpaceAge$Neptune = {ctor: 'Neptune'};
+var _exercism$xelm$SpaceAge$Uranus = {ctor: 'Uranus'};
+var _exercism$xelm$SpaceAge$Saturn = {ctor: 'Saturn'};
+var _exercism$xelm$SpaceAge$Jupiter = {ctor: 'Jupiter'};
+var _exercism$xelm$SpaceAge$Mars = {ctor: 'Mars'};
+var _exercism$xelm$SpaceAge$Earth = {ctor: 'Earth'};
+var _exercism$xelm$SpaceAge$Venus = {ctor: 'Venus'};
+var _exercism$xelm$SpaceAge$Mercury = {ctor: 'Mercury'};

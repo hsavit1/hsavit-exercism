@@ -1,0 +1,20 @@
+var _exercism$xelm$Strain$discard = function (f) {
+	return A2(
+		_elm_lang$core$List$foldr,
+		F2(
+			function (x, y) {
+				return f(x) ? y : A2(_elm_lang$core$List_ops['::'], x, y);
+			}),
+		_elm_lang$core$Native_List.fromArray(
+			[]));
+};
+var _exercism$xelm$Strain$keep = function (f) {
+	return A2(
+		_elm_lang$core$List$foldr,
+		F2(
+			function (x, y) {
+				return f(x) ? A2(_elm_lang$core$List_ops['::'], x, y) : y;
+			}),
+		_elm_lang$core$Native_List.fromArray(
+			[]));
+};

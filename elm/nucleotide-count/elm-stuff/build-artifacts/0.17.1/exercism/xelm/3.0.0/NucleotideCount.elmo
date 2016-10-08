@@ -1,0 +1,50 @@
+var _exercism$xelm$NucleotideCount$nucleotideCounts = function (string) {
+	var init = {
+		a: _elm_lang$core$List$length(
+			A2(
+				_elm_lang$core$List$filter,
+				function (a) {
+					return _elm_lang$core$Native_Utils.eq(
+						a,
+						_elm_lang$core$Native_Utils.chr('A'));
+				},
+				_elm_lang$core$List$sort(
+					_elm_lang$core$String$toList(string)))),
+		t: _elm_lang$core$List$length(
+			A2(
+				_elm_lang$core$List$filter,
+				function (t) {
+					return _elm_lang$core$Native_Utils.eq(
+						t,
+						_elm_lang$core$Native_Utils.chr('T'));
+				},
+				_elm_lang$core$List$sort(
+					_elm_lang$core$String$toList(string)))),
+		c: _elm_lang$core$List$length(
+			A2(
+				_elm_lang$core$List$filter,
+				function (c) {
+					return _elm_lang$core$Native_Utils.eq(
+						c,
+						_elm_lang$core$Native_Utils.chr('C'));
+				},
+				_elm_lang$core$List$sort(
+					_elm_lang$core$String$toList(string)))),
+		g: _elm_lang$core$List$length(
+			A2(
+				_elm_lang$core$List$filter,
+				function (g) {
+					return _elm_lang$core$Native_Utils.eq(
+						g,
+						_elm_lang$core$Native_Utils.chr('G'));
+				},
+				_elm_lang$core$List$sort(
+					_elm_lang$core$String$toList(string))))
+	};
+	return init;
+};
+var _exercism$xelm$NucleotideCount$version = 2;
+var _exercism$xelm$NucleotideCount$Nucleotide = F4(
+	function (a, b, c, d) {
+		return {a: a, t: b, c: c, g: d};
+	});

@@ -1,0 +1,16 @@
+var _exercism$xelm$PhoneNumber$punctuation = _elm_lang$core$Regex$regex('[!@#$%^&*():;\"\',.]+');
+var _exercism$xelm$PhoneNumber$getNumber = function (string) {
+	var _p1 = A4(
+		_elm_lang$core$Regex$replace,
+		_elm_lang$core$Regex$All,
+		_exercism$xelm$PhoneNumber$punctuation,
+		function (_p0) {
+			return '';
+		},
+		_elm_lang$core$String$toLower(string));
+	if (_p1 === '') {
+		return _elm_lang$core$Maybe$Nothing;
+	} else {
+		return _elm_lang$core$Maybe$Just(_p1);
+	}
+};
